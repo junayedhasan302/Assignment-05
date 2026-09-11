@@ -1,6 +1,7 @@
 import { use } from "react";
 import type { TechnologyType } from "./types/technology";
 import Nav from "./components/Nav";
+import Banner from "./components/Banner";
 
 // // 3
 // const TechnologyDataPromise = async ():Promise<TechnologyType[]> => {
@@ -20,6 +21,7 @@ function App() {
     <>
       {/* <h1 className="text-2xl text-red-900">DevStack</h1> */}
       <Nav/>
+      <Banner/>
     </>
   );
 }
