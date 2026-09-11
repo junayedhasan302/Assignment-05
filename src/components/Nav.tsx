@@ -5,7 +5,7 @@ const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-white border-b border-slate-100">
+    <nav className="sticky top-0 z-50  bg-white border-b border-slate-50 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Navbar */}
         <div className="h-16 lg:h-[72px] flex items-center justify-between">
