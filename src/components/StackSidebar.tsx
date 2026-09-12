@@ -12,7 +12,7 @@ const StackSidebar = ({ stack, onRemove, onRemoveAll }: StackSidebarProps) => {
       <h3 className="font-semibold text-gray-900 mb-4">Your Stack</h3>
 
       {stack.length === 0 && (
-        <p className="text-sm text-gray-400">No technology added yet.</p>
+        <p className="text-sm text-gray-400 border border-dashed px-5 py-3 rounded-lg mx-3 my-2">No technology added yet.</p>
       )}
 
       {stack.map((tech) => (
