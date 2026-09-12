@@ -7,8 +7,10 @@
     "icon": "https://icon.icepanel.io/Technology/svg/HTML5.svg",
     "rating": 4.7,
     "difficulty": "Beginner-Friendly",
-    "badge": "Essential"
+    "badge": "Essential",
+    "colorTheme": "orange"
   },
+
   {
     "id": "css3",
     "name": "CSS3",
@@ -17,8 +19,10 @@
     "icon": "https://icon.icepanel.io/Technology/svg/CSS3.svg",
     "rating": 4.7,
     "difficulty": "Beginner-Friendly",
-    "badge": "Essential"
+    "badge": "Essential",
+    "colorTheme": "blue"
   },
+
   {
     "id": "javascript",
     "name": "JavaScript",
@@ -27,38 +31,10 @@
     "icon": "https://icon.icepanel.io/Technology/svg/JavaScript.svg",
     "rating": 4.8,
     "difficulty": "Beginner-Friendly",
-    "badge": "Essential"
+    "badge": "Essential",
+    "colorTheme": "yellow"
   },
-  {
-    "id": "git",
-    "name": "Git",
-    "category": "Tools",
-    "description": "A distributed version control system used to track changes and manage source code.",
-    "icon": "https://icon.icepanel.io/Technology/svg/Git.svg",
-    "rating": 4.9,
-    "difficulty": "Beginner-Friendly",
-    "badge": "Essential"
-  },
-  {
-    "id": "github",
-    "name": "GitHub",
-    "category": "Tools",
-    "description": "A platform for hosting, collaborating on, and managing Git repositories.",
-    "icon": "https://icon.icepanel.io/Technology/svg/GitHub.svg",
-    "rating": 4.9,
-    "difficulty": "Beginner-Friendly",
-    "badge": "Essential"
-  },
-  {
-    "id": "tailwindcss",
-    "name": "Tailwind CSS",
-    "category": "Styling",
-    "description": "A utility-first CSS framework for quickly building modern and responsive interfaces.",
-    "icon": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
-    "rating": 4.8,
-    "difficulty": "Beginner-Friendly",
-    "badge": "Popular"
-  },
+
   {
     "id": "typescript",
     "name": "TypeScript",
@@ -67,9 +43,23 @@
     "icon": "https://icon.icepanel.io/Technology/svg/TypeScript.svg",
     "rating": 4.9,
     "difficulty": "Intermediate",
-    "badge": "Trending"
+    "badge": "Trending",
+    "colorTheme": "blue"
   },
-  {
+
+    {
+    "id": "tailwindcss",
+    "name": "Tailwind CSS",
+    "category": "Styling",
+    "description": "A utility-first CSS framework for quickly building modern and responsive interfaces.",
+    "icon": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
+    "rating": 4.8,
+    "difficulty": "Beginner-Friendly",
+    "badge": "Popular",
+    "colorTheme": "cyan"
+  },
+
+    {
     "id": "react",
     "name": "React",
     "category": "Frontend",
@@ -77,8 +67,47 @@
     "icon": "https://icon.icepanel.io/Technology/svg/React.svg",
     "rating": 4.9,
     "difficulty": "Intermediate",
-    "badge": "Popular"
+    "badge": "Popular",
+    "colorTheme": "cyan"
   },
+
+    {
+    "id": "nextjs",
+    "name": "Next.js",
+    "category": "Frontend",
+    "description": "A React framework for building production-ready web applications with powerful full-stack features.",
+    "icon": "https://icon.icepanel.io/Technology/svg/Next.js.svg",
+    "rating": 4.9,
+    "difficulty": "Intermediate",
+    "badge": "Fullstack",
+    "colorTheme": "slate"
+  },
+
+  {
+    "id": "git",
+    "name": "Git",
+    "category": "Tools",
+    "description": "A distributed version control system used to track changes and manage source code.",
+    "icon": "https://icon.icepanel.io/Technology/svg/Git.svg",
+    "rating": 4.9,
+    "difficulty": "Beginner-Friendly",
+    "badge": "Essential",
+    "colorTheme": "orange"
+  },
+
+  {
+    "id": "github",
+    "name": "GitHub",
+    "category": "Tools",
+    "description": "A platform for hosting, collaborating on, and managing Git repositories.",
+    "icon": "https://icon.icepanel.io/Technology/svg/GitHub.svg",
+    "rating": 4.9,
+    "difficulty": "Beginner-Friendly",
+    "badge": "Essential",
+    "colorTheme": "slate"
+  },
+
+
   {
     "id": "redux",
     "name": "Redux",
@@ -87,18 +116,12 @@
     "icon": "https://icon.icepanel.io/Technology/svg/Redux.svg",
     "rating": 4.7,
     "difficulty": "Intermediate",
-    "badge": "State"
+    "badge": "State",
+    "colorTheme": "purple"
   },
-  {
-    "id": "nextjs",
-    "name": "Next.js",
-    "category": "Frontend",
-    "description": "A React framework for building production-ready web applications with powerful full-stack features.",
-    "icon": "https://icon.icepanel.io/Technology/svg/Next.js.svg",
-    "rating": 4.9,
-    "difficulty": "Intermediate",
-    "badge": "Fullstack"
-  },
+
+
+
   {
     "id": "nodejs",
     "name": "Node.js",
@@ -107,7 +130,8 @@
     "icon": "https://icon.icepanel.io/Technology/svg/Node.js.svg",
     "rating": 4.8,
     "difficulty": "Intermediate",
-    "badge": "Popular"
+    "badge": "Popular",
+    "colorTheme": "green"
   },
   {
     "id": "express",
@@ -117,7 +141,8 @@
     "icon": "https://icon.icepanel.io/Technology/svg/Express.svg",
     "rating": 4.7,
     "difficulty": "Intermediate",
-    "badge": "API"
+    "badge": "API",
+    "colorTheme": "slate"
   },
   {
     "id": "mongodb",
@@ -127,7 +152,8 @@
     "icon": "https://icon.icepanel.io/Technology/svg/MongoDB.svg",
     "rating": 4.8,
     "difficulty": "Intermediate",
-    "badge": "NoSQL"
+    "badge": "NoSQL",
+    "colorTheme": "green"
   },
   {
     "id": "postgresql",
@@ -137,7 +163,8 @@
     "icon": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg",
     "rating": 4.9,
     "difficulty": "Intermediate",
-    "badge": "Top SQL"
+    "badge": "Top SQL",
+    "colorTheme": "blue"
   },
   {
     "id": "firebase",
@@ -147,7 +174,8 @@
     "icon": "https://icon.icepanel.io/Technology/svg/Firebase.svg",
     "rating": 4.7,
     "difficulty": "Intermediate",
-    "badge": "BaaS"
+    "badge": "BaaS",
+    "colorTheme": "orange"
   },
   {
     "id": "socketio",
@@ -157,7 +185,8 @@
     "icon": "https://icon.icepanel.io/Technology/svg/Socket.io.svg",
     "rating": 4.6,
     "difficulty": "Intermediate",
-    "badge": "Realtime"
+    "badge": "Realtime",
+    "colorTheme": "slate"
   },
   {
     "id": "docker",
@@ -167,7 +196,8 @@
     "icon": "https://icon.icepanel.io/Technology/svg/Docker.svg",
     "rating": 4.8,
     "difficulty": "Intermediate",
-    "badge": "DevOps"
+    "badge": "DevOps",
+    "colorTheme": "blue"
   },
   {
     "id": "vercel",
@@ -177,7 +207,8 @@
     "icon": "https://icon.icepanel.io/Technology/svg/Vercel.svg",
     "rating": 4.8,
     "difficulty": "Beginner-Friendly",
-    "badge": "Deploy"
+    "badge": "Deploy",
+    "colorTheme": "black"
   },
   {
     "id": "postman",
@@ -187,7 +218,8 @@
     "icon": "https://icon.icepanel.io/Technology/svg/Postman.svg",
     "rating": 4.8,
     "difficulty": "Beginner-Friendly",
-    "badge": "API Tool"
+    "badge": "API Tool",
+    "colorTheme": "orange"
   },
   {
     "id": "python",
@@ -197,7 +229,8 @@
     "icon": "https://icon.icepanel.io/Technology/svg/Python.svg",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
-    "badge": "Popular"
+    "badge": "Popular",
+    "colorTheme": "blue"
   },
   {
     "id": "docker",
@@ -207,6 +240,7 @@
     "icon": "https://icon.icepanel.io/Technology/svg/Docker.svg",
     "rating": 4.8,
     "difficulty": "Intermediate",
-    "badge": "DevOps"
+    "badge": "DevOps",
+    "colorTheme": "blue"
   }
 ]

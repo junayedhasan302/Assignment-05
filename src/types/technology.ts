@@ -7,4 +7,5 @@ export interface TechnologyType {
   rating: number;
   difficulty: string;
   badge: string;
+  colorTheme: string;
 }

@@ -1,11 +1,13 @@
 import { use } from "react";
 import type { TechnologyType } from "../types/technology";
 import TechCard from "./TechCard";
+import TechnologyGridSkeleton from "./TechnologyGridSkeleton";
 
 async function fetchTechnologies(): Promise<TechnologyType[]> {
   const response = await fetch("/technology.json");
   const data = await response.json();
   return data;
+  // console.log(data, data.length);
 }
 
 const technologiesPromise = fetchTechnologies();
@@ -17,7 +19,7 @@ interface TechnologyListProps {
 
 function TechnologyList({ stack, onAdd }: TechnologyListProps) {
   const technologies = use(technologiesPromise);
-
+  // const dataLen = technologies.length;
   return (
     <div>
       <h1 className="text-2xl font-bold text-gray-900 mb-1">
