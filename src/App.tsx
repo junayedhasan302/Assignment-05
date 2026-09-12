@@ -1,40 +1,57 @@
-import { useState, useEffect, use } from "react";
-import type { TechnologyType } from "./types/technology";
+import { useState, Suspense } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import TechnologyList from "./components/TechnologyList";
+import TechnologyGridSkeleton from "./components/TechnologyGridSkeleton";
+import StackSidebar from "./components/StackSidebar";
 import Nav from "./components/Nav";
 import Banner from "./components/Banner";
-import TechCard from "./components/TechCard";
+import type { TechnologyType } from "./types/technology";
 
 function App() {
-  const [technologies, setTechnologies] = useState<TechnologyType[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
+  const [stack, setStack] = useState<TechnologyType[]>([]);
 
-  useEffect(() => {
-    async function fetchTechnologies() {
-      const response = await fetch("/technology.json");
-      const data = await response.json();
+  function addToStack(tech: TechnologyType) {
+    const alreadyAdded = stack.some((item) => item.id === tech.id);
+    if (alreadyAdded) return;
 
-      
-      console.log(data);
+    setStack([...stack, tech]);
+    toast.success(`${tech.name} added to your stack`);
+  }
 
-      setTechnologies(data);
-      setLoading(false);
+  function removeFromStack(id: TechnologyType["id"]) {
+    const removedTech = stack.find((item) => item.id === id);
+    setStack(stack.filter((item) => item.id !== id));
+
+    if (removedTech) {
+      toast.info(`${removedTech.name} removed from your stack`);
     }
+  }
 
-    fetchTechnologies();
-  }, []);
+  function removeAll() {
+    setStack([]);
+    toast.info("All technologies removed from your stack");
+  }
 
   return (
     <>
-      {/* <h1 className="text-2xl text-red-900">DevStack</h1> */}
+      <ToastContainer position="top-right" autoClose={2000} />
+
       <Nav />
       <Banner />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4
-      max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-amber-25">
-        {technologies.map((tech) => (
-          <TechCard key={tech.id} tech={tech} />
-        ))}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-6 mt-10">
+        <div className="flex-1">
+          <Suspense fallback={<TechnologyGridSkeleton />}>
+            <TechnologyList stack={stack} onAdd={addToStack} />
+          </Suspense>
+        </div>
+
+        <StackSidebar
+          stack={stack}
+          onRemove={removeFromStack}
+          onRemoveAll={removeAll}
+        />
       </div>
     </>
   );
