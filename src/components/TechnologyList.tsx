@@ -16,8 +16,10 @@ function TechnologyList({ stack, onAdd }: TechnologyListProps) {
     fetch("/technology.json")
       .then((response) => response.json())
       .then((data) => {
-        setTechnologies(data);
-        setIsLoading(false);
+        setTimeout(() => {
+          setTechnologies(data);
+          setIsLoading(false);
+        }, 100);
       });
   }, []);
 
