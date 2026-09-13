@@ -1,8 +1,7 @@
-import { useState, Suspense } from "react";
+import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import TechnologyList from "./components/TechnologyList";
-import TechnologyGridSkeleton from "./components/TechnologyGridSkeleton";
 import StackSidebar from "./components/StackSidebar";
 import Nav from "./components/Nav";
 import Banner from "./components/Banner";
@@ -44,9 +43,7 @@ function App() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-6 mt-10">
         <div className="flex-1">
-          <Suspense fallback={<TechnologyGridSkeleton />}>
-            <TechnologyList stack={stack} onAdd={addToStack} />
-          </Suspense>
+          <TechnologyList stack={stack} onAdd={addToStack} />
         </div>
 
         <StackSidebar

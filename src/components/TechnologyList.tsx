@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import type { TechnologyType } from "../types/technology";
 import TechCard from "./TechCard";
+import TechnologyGridSkeleton from "./TechnologyGridSkeleton";
 
 interface TechnologyListProps {
   stack: TechnologyType[];
@@ -9,12 +10,20 @@ interface TechnologyListProps {
 
 function TechnologyList({ stack, onAdd }: TechnologyListProps) {
   const [technologies, setTechnologies] = useState<TechnologyType[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetch("/technology.json")
       .then((response) => response.json())
-      .then((data) => setTechnologies(data));
+      .then((data) => {
+        setTechnologies(data);
+        setIsLoading(false);
+      });
   }, []);
+
+  if (isLoading) {
+    return <TechnologyGridSkeleton />;
+  }
 
   return (
     <div>
