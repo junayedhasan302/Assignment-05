@@ -1,7 +1,7 @@
 import { use } from "react";
 import type { TechnologyType } from "../types/technology";
 import TechCard from "./TechCard";
-import TechnologyGridSkeleton from "./TechnologyGridSkeleton";
+// import TechnologyGridSkeleton from "./TechnologyGridSkeleton";
 
 async function fetchTechnologies(): Promise<TechnologyType[]> {
   const response = await fetch("/technology.json");

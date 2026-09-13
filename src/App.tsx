@@ -7,6 +7,7 @@ import StackSidebar from "./components/StackSidebar";
 import Nav from "./components/Nav";
 import Banner from "./components/Banner";
 import type { TechnologyType } from "./types/technology";
+import Footer from "./components/Footer";
 
 function App() {
   const [stack, setStack] = useState<TechnologyType[]>([]);
@@ -51,6 +52,7 @@ function App() {
           onRemoveAll={removeAll}
         />
       </div>
+      <Footer/>
     </>
   );
 }
