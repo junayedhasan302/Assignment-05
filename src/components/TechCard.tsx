@@ -29,64 +29,64 @@ function getBadgeColor(colorTheme: string) {
   }
 }
 
-// If i hover the card then the technology theme color will showed as a bg color
+// If i hover the card (desktop) or tap the card (mobile/tablet), theme color will show as bg color
 function getHoverBackground(colorTheme: string) {
   if (colorTheme === "orange") {
-    return "hover:bg-orange-50";
+    return "hover:bg-orange-50 active:bg-orange-50";
   } else if (colorTheme === "blue") {
-    return "hover:bg-blue-50";
+    return "hover:bg-blue-50 active:bg-blue-50";
   } else if (colorTheme === "yellow") {
-    return "hover:bg-yellow-50";
+    return "hover:bg-yellow-50 active:bg-yellow-50";
   } else if (colorTheme === "slate") {
-    return "hover:bg-slate-50";
+    return "hover:bg-slate-50 active:bg-slate-50";
   } else if (colorTheme === "cyan") {
-    return "hover:bg-cyan-50";
+    return "hover:bg-cyan-50 active:bg-cyan-50";
   } else if (colorTheme === "purple") {
-    return "hover:bg-purple-50";
+    return "hover:bg-purple-50 active:bg-purple-50";
   } else if (colorTheme === "green") {
-    return "hover:bg-green-50";
+    return "hover:bg-green-50 active:bg-green-50";
   } else if (colorTheme === "black") {
-    return "hover:bg-gray-50";
+    return "hover:bg-gray-50 active:bg-gray-50";
   } else {
-    return "hover:bg-gray-50";
+    return "hover:bg-gray-50 active:bg-gray-50";
   }
 }
 
 const TechCard = ({ tech, isAdded, onAdd }: TechCardProps) => {
   return (
     // Card Div
-    <div className={`bg-white border border-gray-200 rounded-2xl p-5 shadow-sm hover:shadow-lg hover:-translate-y-[1px] transition duration-200 h-full flex flex-col ${getHoverBackground(tech.colorTheme)}`}>
+    <div className={`bg-white border border-gray-200 rounded-xl sm:rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-lg active:shadow-lg hover:-translate-y-[1px] active:-translate-y-[1px] transition duration-200 h-full flex flex-col ${getHoverBackground(tech.colorTheme)}`}>
       {/* Logo, Badge  */}
-      <div className="flex justify-between items-center mb-4">
+      <div className="flex justify-between items-center mb-3 sm:mb-4">
         {/* Logo */}
-        <img src={tech.icon} alt={tech.name} className="w-8 h-8 object-contain" />
+        <img src={tech.icon} alt={tech.name} className="w-7 h-7 sm:w-8 sm:h-8 object-contain" />
         {/* Badge  */}
-        <span className={`text-xs px-2.5 py-1 rounded-full font-medium ${getBadgeColor(tech.colorTheme)}`}>
+        <span className={`text-[10px] sm:text-xs px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full font-medium ${getBadgeColor(tech.colorTheme)}`}>
           {tech.badge}
         </span>
       </div>
 
       {/* Technology NAme  */}
-      <h3 className="font-bold text-gray-900 text-base mb-1">{tech.name}</h3>
+      <h3 className="font-bold text-gray-900 text-sm sm:text-base mb-1">{tech.name}</h3>
       {/* Technology Description */}
-      <p className="font-medium text-gray-500 mb-4 leading-relaxed">
+      <p className="text-sm sm:text-base font-medium text-gray-500 mb-3 sm:mb-4 leading-relaxed">
         {tech.description}
       </p>
 
       {/* category, difficulty, rating  */}
-      <div className="flex flex-wrap items-center gap-2 text-xs text-gray-500 mb-4">
-        <span className="bg-gray-200 px-2 py-1 rounded-md">{tech.category}</span>
-        <span className="bg-gray-200 px-2 py-1 rounded-md">{tech.difficulty}</span>
+      <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs text-gray-500 mb-3 sm:mb-4">
+        <span className="bg-gray-200 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-md">{tech.category}</span>
+        <span className="bg-gray-200 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-md">{tech.difficulty}</span>
         <span className="flex items-center gap-1">⭐ {tech.rating}</span>
       </div>
 
       {/* Add to cart Button */}
       <button onClick={() => onAdd(tech)}
-      // disabled={isAdded}
+      disabled={isAdded}
         className={
           isAdded
-            ? "w-full bg-gray-200 text-gray-500 rounded-lg py-2.5 text-sm font-medium mt-auto"
-            : "w-full bg-gray-900 text-white rounded-lg py-2.5 text-sm font-medium mt-auto cursor-pointer"
+            ? "w-full bg-gray-200 text-gray-500 rounded-lg py-2 sm:py-2.5 text-xs sm:text-sm font-medium mt-auto"
+            : "w-full bg-gray-900 text-white rounded-lg py-2 sm:py-2.5 text-xs sm:text-sm font-medium mt-auto cursor-pointer"
         }
       >
         {isAdded ? "✓ Added to Stack" : "Add to Stack"}
