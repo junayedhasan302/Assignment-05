@@ -10,24 +10,22 @@ import type { TechnologyType } from "./types/technology";
 
 function App() {
   const [stack, setStack] = useState<TechnologyType[]>([]);
-
+  //Add
   function addToStack(tech: TechnologyType) {
     const alreadyAdded = stack.some((item) => item.id === tech.id);
     if (alreadyAdded) return;
-
     setStack([...stack, tech]);
     toast.success(`${tech.name} added to your stack`);
   }
-
+  //Remove
   function removeFromStack(id: TechnologyType["id"]) {
     const removedTech = stack.find((item) => item.id === id);
     setStack(stack.filter((item) => item.id !== id));
-
     if (removedTech) {
       toast.info(`${removedTech.name} removed from your stack`);
     }
   }
-
+  //Remove All
   function removeAll() {
     setStack([]);
     toast.info("All technologies removed from your stack");

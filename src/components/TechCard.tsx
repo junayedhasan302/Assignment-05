@@ -55,7 +55,7 @@ function getHoverBackground(colorTheme: string) {
 const TechCard = ({ tech, isAdded, onAdd }: TechCardProps) => {
   return (
     // Card Div
-    <div className={`bg-white border border-gray-200 rounded-2xl p-5 shadow-sm hover:shadow-lg hover:-translate-y-1 transition duration-200 h-full flex flex-col ${getHoverBackground(tech.colorTheme)}`}>
+    <div className={`bg-white border border-gray-200 rounded-2xl p-5 shadow-sm hover:shadow-lg hover:-translate-y-[1px] transition duration-200 h-full flex flex-col ${getHoverBackground(tech.colorTheme)}`}>
       {/* Logo, Badge  */}
       <div className="flex justify-between items-center mb-4">
         {/* Logo */}
