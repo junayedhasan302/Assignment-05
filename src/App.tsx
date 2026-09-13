@@ -57,3 +57,16 @@ function App() {
   );
 }
 export default App;
+
+
+
+// Assignment: 05
+// live Link: jhdevstack.netlify.app
+
+// DEVELOPER DETAILS
+// Junayed Hasan
+// Programming Hero: WEB14-0687
+
+
+// github.com/junayedhasan302
+// https://www.linkedin.com/in/junayet-hasan-jh/
