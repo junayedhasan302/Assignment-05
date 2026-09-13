@@ -64,12 +64,15 @@ const Nav = () => {
                 px-4 sm:px-5
                 py-2
                 rounded-full
-                bg-pink-600
+                bg-gradient-to-r
+                from-orange-500
+                via-pink-500
+                to-purple-600
                 text-white
                 text-xs sm:text-sm
                 font-semibold
-                hover:bg-pink-700
-                transition-colors duration-200
+                hover:opacity-90
+                transition-opacity duration-200
               "
             >
               Sign Up
@@ -82,7 +85,9 @@ const Nav = () => {
           <div className="lg:hidden border-t border-slate-100 py-4">
             <ul className="flex flex-col gap-4 text-sm font-semibold text-slate-600">
               <li className="cursor-pointer hover:text-pink-600">Home</li>
-              <li className="cursor-pointer hover:text-pink-600">Technologies</li>
+              <li className="cursor-pointer hover:text-pink-600">
+                Technologies
+              </li>
               <li className="cursor-pointer hover:text-pink-600">Projects</li>
               <li className="cursor-pointer hover:text-pink-600">About</li>
               <li className="cursor-pointer hover:text-pink-600">Contact</li>

@@ -81,14 +81,15 @@ const TechCard = ({ tech, isAdded, onAdd }: TechCardProps) => {
       </div>
 
       {/* Add to cart Button */}
-      <button onClick={() => onAdd(tech)} disabled={isAdded}
+      <button onClick={() => onAdd(tech)}
+      // disabled={isAdded}
         className={
           isAdded
             ? "w-full bg-gray-200 text-gray-500 rounded-lg py-2.5 text-sm font-medium mt-auto"
             : "w-full bg-gray-900 text-white rounded-lg py-2.5 text-sm font-medium mt-auto cursor-pointer"
         }
       >
-        {isAdded ? "Added" : "Add to Stack"}
+        {isAdded ? "✓ Added to Stack" : "Add to Stack"}
       </button>
     </div>
   );

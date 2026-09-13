@@ -14,7 +14,10 @@ function App() {
   //Add
   function addToStack(tech: TechnologyType) {
     const alreadyAdded = stack.some((item) => item.id === tech.id);
-    if (alreadyAdded) return;
+    if (alreadyAdded) {
+      toast.warning(`${tech.name} is already in your stack`);
+      return;
+    }
     setStack([...stack, tech]);
     toast.success(`${tech.name} added to your stack`);
   }
@@ -56,5 +59,4 @@ function App() {
     </>
   );
 }
-
 export default App;

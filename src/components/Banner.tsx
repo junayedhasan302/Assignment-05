@@ -2,7 +2,7 @@
 import BannerImage from "../assets/banner-stack.png";
 const Banner = () => {
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-amber-50">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
       <div
         className="
           flex

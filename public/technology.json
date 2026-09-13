@@ -120,8 +120,6 @@
     "colorTheme": "purple"
   },
 
-
-
   {
     "id": "nodejs",
     "name": "Node.js",
@@ -232,15 +230,15 @@
     "badge": "Popular",
     "colorTheme": "blue"
   },
-  {
-    "id": "docker",
-    "name": "Docker",
-    "category": "DevOps",
-    "description": "A platform for packaging and running applications in lightweight and portable containers.",
-    "icon": "https://icon.icepanel.io/Technology/svg/Docker.svg",
+    {
+    "id": "redis",
+    "name": "Redis",
+    "category": "Database",
+    "description": "An in-memory data store used for caching, session management, and high-speed data retrieval.",
+    "icon": "https://icon.icepanel.io/Technology/svg/Redis.svg",
     "rating": 4.8,
     "difficulty": "Intermediate",
-    "badge": "DevOps",
-    "colorTheme": "blue"
+    "badge": "Caching",
+    "colorTheme": "red"
   }
 ]
