@@ -1,4 +1,5 @@
 import type { TechnologyType } from '../types/technology';
+import { toast } from 'react-toastify';
 
 // Interface for TechCardProps
 interface TechCardProps {
@@ -105,8 +106,9 @@ const TechCard = ({ tech, isAdded, onAdd }: TechCardProps) => {
 
       {/* Add to Stack Button */}
       <button
-        onClick={() => onAdd(tech)}
-        disabled={isAdded}
+        onClick={() =>
+          isAdded ? toast.warning(`${tech.name} is already added to your stack`) : onAdd(tech)
+        }
         className={
           isAdded
             ? "w-full bg-gray-200 text-gray-500 rounded-lg py-2 sm:py-2.5 text-xs sm:text-sm font-medium mt-auto"
